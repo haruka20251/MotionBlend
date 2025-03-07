@@ -26,7 +26,7 @@ public class Testwalk : MonoBehaviour
         }
         else
         {
-            speed -= deceleration * Time.deltaTime * 0.1f;
+            speed -= deceleration * Time.deltaTime * 0.5f;
         }
         speed = Mathf.Clamp(speed, 0f, maxSpeed);
         animator.SetFloat("Blend", speed);
