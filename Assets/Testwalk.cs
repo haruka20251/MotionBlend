@@ -5,8 +5,8 @@ using UnityEngine;
 public class Testwalk : MonoBehaviour
 {
     public Animator animator;
-    public float acceleration = 0.1f;//加速度
-    public float deceleration = 0.5f;//減速度
+    public float acceleration = 0.5f;//加速度
+    public float deceleration = 0.4f;//減速度
     public float maxSpeed = 1f;
     private float speed = 0;
     
@@ -26,7 +26,7 @@ public class Testwalk : MonoBehaviour
         }
         else
         {
-            speed -= deceleration * Time.deltaTime * 0.5f;
+            speed -= deceleration * Time.deltaTime*0.2f ;
         }
         speed = Mathf.Clamp(speed, 0f, maxSpeed);
         animator.SetFloat("Blend", speed);
